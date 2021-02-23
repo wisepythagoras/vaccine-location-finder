@@ -1,5 +1,14 @@
 const axios = require('axios').default;
+const UserAgent = require('user-agents');
 const { compact, values } = require('lodash');
+
+/**
+ * @typedef {{
+ *     isAvailable: boolean,
+ *     dose1: boolean,
+ *     dose2: boolean,
+ * }} Availablility
+ */
 
 /**
  * @typedef {{
@@ -14,7 +23,14 @@ const { compact, values } = require('lodash');
  * }} Store
  */
 
-const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11.0; rv:84.0) Gecko/20100101 Firefox/84.0';
+/**
+ * Generates a random user agent string.
+ * @returns {string}
+ */
+const genUserAgent = () => {
+    const userAgent = new UserAgent();
+    return userAgent.toString();
+};
 
 /**
  * Get the stores around a specific zip code.
@@ -25,7 +41,7 @@ const getStores = async (zip) => {
     const RITE_AID_GET_STORES = `https://www.riteaid.com/services/ext/v2/stores/getStores?address=${zip}&attrFilter=PREF-112&fetchMechanismVersion=2&radius=50`;
 
     const result = await axios.get(RITE_AID_GET_STORES, {
-        headers: { 'User-Agent': USER_AGENT },
+        headers: { 'User-Agent': genUserAgent() },
     });
     const resp = result.data;
 
@@ -38,7 +54,7 @@ const getStores = async (zip) => {
         return {
             storeNumber: store.storeNumber.toString(),
             phoneNumber: store.fullPhone,
-            address: compact([store.address, store.city, store.state, store.zip]).join(', '),
+            address: compact([store.address, store.city, store.state, store.zipcode]).join(', '),
             locationDetails: store.locationDescription,
             latitude: store.latitude,
             longitude: store.longitude,
@@ -54,13 +70,13 @@ const getStores = async (zip) => {
 /**
  * Check a store if it has available slots.
  * @param {number} storeNumber The store number.
- * @returns {boolean}
+ * @returns {Promise<Availablility>}
  */
 const checkStoreSlots = async (storeNumber) => {
     const RITE_AID_CHECK_SLOTS = `https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=${storeNumber}`;
 
     const resp = await axios.get(RITE_AID_CHECK_SLOTS, {
-        headers: { 'User-Agent': USER_AGENT },
+        headers: { 'User-Agent': genUserAgent() },
     });
     const body = resp.data;
     const data = body.Data;
@@ -69,13 +85,24 @@ const checkStoreSlots = async (storeNumber) => {
         const slots = values(data.slots);
 
         if (!slots || !slots.length) {
-            return false;
+            return {
+                isAvailable: false,
+                dose1: false,
+                dose2: false,
+            };
         }
-
-        return slots[0] !== false || slots[1] !== false;
+        return {
+            isAvailable: slots[0] !== false || slots[1] !== false,
+            dose1: slots[0] !== false,
+            dose2: slots[1] !== false,
+        };
     }
 
-    return false;
+    return {
+        isAvailable: false,
+        dose1: false,
+        dose2: false,
+    };
 };
 
 module.exports.getStores = getStores;

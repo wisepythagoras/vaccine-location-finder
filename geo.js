@@ -3,8 +3,17 @@ const usZips = require('us-zips');
 const { values, keys } = require('lodash');
 
 /**
+ * @typedef {{
+ *     longitude: number,
+ *     latitude: number,
+ *     zip: number,
+ * }} ZipCode
+ */
+
+/**
  * Find zip codes that are within 10km from the provided zip code.
  * @param {number} zip The zip code to start from.
+ * @returns {ZipCode[]}
  */
 const getClosebyZips = (zip) => {
     const location = usZips[zip];
@@ -23,7 +32,6 @@ const getClosebyZips = (zip) => {
 
     for (let i = 0; i < zipCodes.length; i++) {
         const distance = geolib.getDistance(location, zipCodes[i]);
-        console.log(distance);
 
         if (distance > 10000) {
             break;
