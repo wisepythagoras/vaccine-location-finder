@@ -1,0 +1,7 @@
+{
+    "walgreens": {
+        "username": "EMAIL",
+        "password": "PASSWORD",
+        "securityQuestion": "SECURITY_QUESTION_ANSWER"
+    }
+}

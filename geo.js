@@ -1,6 +1,18 @@
 const geolib = require('geolib');
 const usZips = require('us-zips');
-const { values, keys } = require('lodash');
+const { keys } = require('lodash');
+
+const states = require('./states.json');
+
+/**
+ * @typedef {{
+ *     stateCode: string,
+ *     stateName: string,
+ *     zipCodeMin: string,
+ *     zipCodeMax: string,
+ *     otherZipCodes?: string[],
+ * }} State
+ */
 
 /**
  * @typedef {{
@@ -43,6 +55,20 @@ const getClosebyZips = (zip) => {
     return closeByZipCodes;
 };
 
+/**
+ * Find a state by its code.
+ * @param {string} code The state code.
+ * @returns {State | undefined}
+ */
+const findStateByCode = (code) => {
+    code = code.toUpperCase();
+
+    return states.find((state) => {
+        return state.stateCode === code;
+    });
+};
+
 // 1 meter = 0.00062137119223733 miles
 
 module.exports.getClosebyZips = getClosebyZips;
+module.exports.findStateByCode = findStateByCode;

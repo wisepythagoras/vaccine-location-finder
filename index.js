@@ -1,7 +1,7 @@
 const minimist = require('minimist');
 const moment = require('moment');
 const rxdb = require('rxdb');
-const { getClosebyZips } = require('./geo');
+const { getClosebyZips, findStateByCode } = require('./geo');
 const { createDatabase } = require('./db');
 const { getStores, checkStoreSlots } = require('./api');
 
@@ -14,6 +14,7 @@ let storeCache = {};
 if ('help' in argv) {
     console.log('node index.js [options]');
     console.log('  --zip* [zip code], Your target area zip code');
+    console.log('  --state* [state code], Your state (ex WA, CA, NY)');
     console.log('  --bootstrap, Gets all the stores close to the selected zip');
     console.log('');
     console.log('Run with both --zip and --bootstrap to get a list of stores. And then');
@@ -21,8 +22,16 @@ if ('help' in argv) {
     process.exit();
 }
 
-if (!('zip' in argv)) {
-    console.log('node index.js --zip [your zip code] [--bootstrap]');
+if (!('zip' in argv) || !('state' in argv)) {
+    console.log('node index.js --zip [your zip code] --state [state code] [--bootstrap]');
+    process.exit(1);
+}
+
+// Get the state.
+const state = findStateByCode(argv.state);
+
+if (!state) {
+    console.log('Invalid state code');
     process.exit(1);
 }
 

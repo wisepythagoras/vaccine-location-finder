@@ -1,0 +1,373 @@
+[
+    {
+        "stateCode": "AL",
+        "stateName": "Alabama",
+        "zipCodeMin": "350",
+        "zipCodeMax": "369"
+    },
+    {
+        "stateCode": "AK",
+        "stateName": "Alaska",
+        "zipCodeMin": "995",
+        "zipCodeMax": "999"
+    },
+    {
+        "stateCode": "AS",
+        "stateName": "American Samoa",
+        "zipCodeMin": "967",
+        "zipCodeMax": "967"
+    },
+    {
+        "stateCode": "AZ",
+        "stateName": "Arizona",
+        "zipCodeMin": "850",
+        "zipCodeMax": "865"
+    },
+    {
+        "stateCode": "AR",
+        "stateName": "Arkansas",
+        "zipCodeMin": "716",
+        "zipCodeMax": "729",
+        "otherZipCodes": [
+            "755"
+        ]
+    },
+    {
+        "stateCode": "CA",
+        "stateName": "California",
+        "zipCodeMin": "900",
+        "zipCodeMax": "966"
+    },
+    {
+        "stateCode": "CO",
+        "stateName": "Colorado",
+        "zipCodeMin": "800",
+        "zipCodeMax": "816"
+    },
+    {
+        "stateCode": "CT",
+        "stateName": "Connecticut",
+        "zipCodeMin": "060",
+        "zipCodeMax": "069"
+    },
+    {
+        "stateCode": "DE",
+        "stateName": "Delaware",
+        "zipCodeMin": "197",
+        "zipCodeMax": "199"
+    },
+    {
+        "stateCode": "DC",
+        "stateName": "District of Columbia",
+        "zipCodeMin": "200",
+        "zipCodeMax": "205"
+    },
+    {
+        "stateCode": "FM",
+        "stateName": "FS of Micronesia",
+        "zipCodeMin": "969",
+        "zipCodeMax": "969"
+    },
+    {
+        "stateCode": "FL",
+        "stateName": "Florida",
+        "zipCodeMin": "320",
+        "zipCodeMax": "349"
+    },
+    {
+        "stateCode": "GA",
+        "stateName": "Georgia",
+        "zipCodeMin": "300",
+        "zipCodeMax": "319",
+        "otherZipCodes": [
+            "398",
+            "399"
+        ]
+    },
+    {
+        "stateCode": "GU",
+        "stateName": "Guam",
+        "zipCodeMin": "969",
+        "zipCodeMax": "969"
+    },
+    {
+        "stateCode": "HI",
+        "stateName": "Hawaii",
+        "zipCodeMin": "967",
+        "zipCodeMax": "968"
+    },
+    {
+        "stateCode": "ID",
+        "stateName": "Idaho",
+        "zipCodeMin": "832",
+        "zipCodeMax": "838"
+    },
+    {
+        "stateCode": "IL",
+        "stateName": "Illinois",
+        "zipCodeMin": "600",
+        "zipCodeMax": "629"
+    },
+    {
+        "stateCode": "IN",
+        "stateName": "Indiana",
+        "zipCodeMin": "460",
+        "zipCodeMax": "479"
+    },
+    {
+        "stateCode": "IA",
+        "stateName": "Iowa",
+        "zipCodeMin": "500",
+        "zipCodeMax": "528"
+    },
+    {
+        "stateCode": "KS",
+        "stateName": "Kansas",
+        "zipCodeMin": "660",
+        "zipCodeMax": "679"
+    },
+    {
+        "stateCode": "KY",
+        "stateName": "Kentucky",
+        "zipCodeMin": "400",
+        "zipCodeMax": "427"
+    },
+    {
+        "stateCode": "LA",
+        "stateName": "Louisiana",
+        "zipCodeMin": "700",
+        "zipCodeMax": "714"
+    },
+    {
+        "stateCode": "ME",
+        "stateName": "Maine",
+        "zipCodeMin": "039",
+        "zipCodeMax": "049"
+    },
+    {
+        "stateCode": "MH",
+        "stateName": "Marshall Islands",
+        "zipCodeMin": "969",
+        "zipCodeMax": "969"
+    },
+    {
+        "stateCode": "MD",
+        "stateName": "Maryland",
+        "zipCodeMin": "206",
+        "zipCodeMax": "219"
+    },
+    {
+        "stateCode": "MA",
+        "stateName": "Massachusetts",
+        "zipCodeMin": "010",
+        "zipCodeMax": "027",
+        "otherZipCodes": [
+            "055"
+        ]
+    },
+    {
+        "stateCode": "MI",
+        "stateName": "Michigan",
+        "zipCodeMin": "480",
+        "zipCodeMax": "499"
+    },
+    {
+        "stateCode": "MN",
+        "stateName": "Minnesota",
+        "zipCodeMin": "550",
+        "zipCodeMax": "567"
+    },
+    {
+        "stateCode": "MS",
+        "stateName": "Mississippi",
+        "zipCodeMin": "386",
+        "zipCodeMax": "397"
+    },
+    {
+        "stateCode": "MO",
+        "stateName": "Missouri",
+        "zipCodeMin": "630",
+        "zipCodeMax": "658"
+    },
+    {
+        "stateCode": "MT",
+        "stateName": "Montana",
+        "zipCodeMin": "590",
+        "zipCodeMax": "599"
+    },
+    {
+        "stateCode": "NE",
+        "stateName": "Nebraska",
+        "zipCodeMin": "680",
+        "zipCodeMax": "693"
+    },
+    {
+        "stateCode": "NV",
+        "stateName": "Nevada",
+        "zipCodeMin": "889",
+        "zipCodeMax": "898"
+    },
+    {
+        "stateCode": "NH",
+        "stateName": "New Hampshire",
+        "zipCodeMin": "030",
+        "zipCodeMax": "039"
+    },
+    {
+        "stateCode": "NJ",
+        "stateName": "New Jersey",
+        "zipCodeMin": "070",
+        "zipCodeMax": "089"
+    },
+    {
+        "stateCode": "NM",
+        "stateName": "New Mexico",
+        "zipCodeMin": "870",
+        "zipCodeMax": "884"
+    },
+    {
+        "stateCode": "NY",
+        "stateName": "New York",
+        "zipCodeMin": "090",
+        "zipCodeMax": "149",
+        "otherZipCodes": [
+            "005",
+            "063"
+        ]
+    },
+    {
+        "stateCode": "NC",
+        "stateName": "North Carolina",
+        "zipCodeMin": "269",
+        "zipCodeMax": "289"
+    },
+    {
+        "stateCode": "ND",
+        "stateName": "North Dakota",
+        "zipCodeMin": "580",
+        "zipCodeMax": "588"
+    },
+    {
+        "stateCode": "MP",
+        "stateName": "N. Mariana Islands",
+        "zipCodeMin": "969",
+        "zipCodeMax": "969"
+    },
+    {
+        "stateCode": "OH",
+        "stateName": "Ohio",
+        "zipCodeMin": "430",
+        "zipCodeMax": "459"
+    },
+    {
+        "stateCode": "OK",
+        "stateName": "Oklahoma",
+        "zipCodeMin": "730",
+        "zipCodeMax": "749"
+    },
+    {
+        "stateCode": "OR",
+        "stateName": "Oregon",
+        "zipCodeMin": "970",
+        "zipCodeMax": "979"
+    },
+    {
+        "stateCode": "PW",
+        "stateName": "Palau Island",
+        "zipCodeMin": "969",
+        "zipCodeMax": "969"
+    },
+    {
+        "stateCode": "PA",
+        "stateName": "Pennsylvania",
+        "zipCodeMin": "150",
+        "zipCodeMax": "196"
+    },
+    {
+        "stateCode": "PR",
+        "stateName": "Puerto Rico",
+        "zipCodeMin": "006",
+        "zipCodeMax": "009"
+    },
+    {
+        "stateCode": "RI",
+        "stateName": "Rhode Island",
+        "zipCodeMin": "028",
+        "zipCodeMax": "029"
+    },
+    {
+        "stateCode": "SC",
+        "stateName": "South Carolina",
+        "zipCodeMin": "290",
+        "zipCodeMax": "299"
+    },
+    {
+        "stateCode": "SD",
+        "stateName": "South Dakota",
+        "zipCodeMin": "570",
+        "zipCodeMax": "577"
+    },
+    {
+        "stateCode": "TN",
+        "stateName": "Tennessee",
+        "zipCodeMin": "370",
+        "zipCodeMax": "385"
+    },
+    {
+        "stateCode": "TX",
+        "stateName": "Texas",
+        "zipCodeMin": "750",
+        "zipCodeMax": "799",
+        "otherZipCodes": [
+            "885"
+        ]
+    },
+    {
+        "stateCode": "UT",
+        "stateName": "Utah",
+        "zipCodeMin": "840",
+        "zipCodeMax": "847"
+    },
+    {
+        "stateCode": "VT",
+        "stateName": "Vermont",
+        "zipCodeMin": "050",
+        "zipCodeMax": "059"
+    },
+    {
+        "stateCode": "VA",
+        "stateName": "Virginia 201",
+        "zipCodeMin": "220",
+        "zipCodeMax": "246"
+    },
+    {
+        "stateCode": "VI",
+        "stateName": "Virgin Islands",
+        "zipCodeMin": "008",
+        "zipCodeMax": "008"
+    },
+    {
+        "stateCode": "WA",
+        "stateName": "Washington",
+        "zipCodeMin": "980",
+        "zipCodeMax": "994"
+    },
+    {
+        "stateCode": "WI",
+        "stateName": "Wisconsin",
+        "zipCodeMin": "530",
+        "zipCodeMax": "549"
+    },
+    {
+        "stateCode": "WV",
+        "stateName": "West Virginia",
+        "zipCodeMin": "247",
+        "zipCodeMax": "268"
+    },
+    {
+        "stateCode": "WY",
+        "stateName": "Wyoming",
+        "zipCodeMin": "820",
+        "zipCodeMax": "831"
+    }
+]
